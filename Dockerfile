@@ -32,6 +32,8 @@ WORKDIR /sw/sol
 RUN wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz && tar zxvf ./apache-maven-3.8.6-bin.tar.gz && rm -f apache-maven-3.8.6-bin.tar.gz
 
 # 어플리케이션 설치
+ARG DISABLE_CACHE=1
+
 WORKDIR /sw/app
 RUN git clone https://github.com/fortae84/devops.git
 
